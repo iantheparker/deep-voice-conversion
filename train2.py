@@ -13,6 +13,7 @@ import convert, eval2
 from data_load import get_batch
 import argparse
 
+tf.logging.set_verbosity(tf.logging.INFO)
 
 def train(logdir1='logdir/default/train1', logdir2='logdir/default/train2', queue=True):
     model = Model(mode="train2", batch_size=hp.Train2.batch_size, queue=queue)

@@ -46,7 +46,7 @@ class Default:
 
 class Train1:
     # path
-    data_path = '{}/timit/TIMIT/TRAIN/*/*/*.wav'.format(data_path_base)
+    data_path = '{}/timit/*/*.wav'.format(data_path_base)
 
     # model
     hidden_units = 256  # alias = E
@@ -65,7 +65,7 @@ class Train1:
 
 class Train2:
     # path
-    data_path = '{}/kate/sense_and_sensibility_split/*.wav'.format(data_path_base)
+    data_path = '{}/andy/*.wav'.format(data_path_base)
     # data_path = '{}/arctic/slt/*.wav'.format(data_path_base)
 
     # model
@@ -77,15 +77,15 @@ class Train2:
     dropout_rate = 0.2
 
     # train
-    batch_size = 32
+    batch_size = 16
     lr = 0.0005
-    num_epochs = 10000
-    save_per_epoch = 50
+    num_epochs = 1
+    save_per_epoch = 1
 
 
 class Test1:
     # path
-    data_path = '{}/timit/TIMIT/TEST/*/*/*.wav'.format(data_path_base)
+    data_path = '{}/timit/*/*.wav'.format(data_path_base)
 
     # test
     batch_size = 32
@@ -93,7 +93,7 @@ class Test1:
 
 class Test2:
     # test
-    batch_size = 32
+    batch_size = 16
 
 
 class Convert:
